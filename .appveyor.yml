@@ -1,0 +1,24 @@
+version: '#{build}'
+
+clone_folder: c:\stack
+
+shallow_clone: true
+
+environment:
+  STACK_ROOT: c:\sr
+
+install:
+- cmd: cinst haskell-stack
+
+cache:
+- C:\ProgramData\chocolatey\bin -> appveyor.yml
+- C:\ProgramData\chocolatey\lib -> appveyor.yml
+- '%STACK_ROOT%'
+- '%LOCALAPPDATA%\Programs\stack'
+
+build_script:
+- cmd: echo "no build"
+
+test_script:
+- cmd: stack setup
+- cmd: stack --no-terminal --skip-ghc-check test
