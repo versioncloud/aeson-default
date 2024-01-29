@@ -1,6 +1,6 @@
 name:                aeson-default
 version:             0.9.1.0
-synopsis:            Apply default value to FromJSON instacnes' Maybe fields
+synopsis:            Apply default value to FromJSON instances' Maybe fields
 description:         Please see http://hackage.haskell.org/package/aeson-default
 github:              versioncloud/aeson-default
 category:            HKD, Default, JSON, Library
